@@ -41,15 +41,21 @@
     nav.setAttribute('class', 'side-menu');
 
     var ul = document.createElement('ul');
+    var basePath= '/FIFA-website-Assignment';
     routes.forEach(function(route) {
         var li = document.createElement('li');
         var link = document.createElement('a');
 
-        link.innerText = route.label;
-        link.setAttribute('href', route.href);
-        
         var currentRoute = window.location.pathname;
-        if (currentRoute === route.href) {
+        link.innerText = route.label;
+
+        if (currentRoute.indexOf(basePath) === 0) {
+       	    link.setAttribute('href', basePath + route.href);
+	} else if (currentRoute === '/') {
+	    link.setAttribute('href', route.href); 	
+	}      
+
+        if (currentRoute === route.href || currentRoute === basePath + route.href) {
             li.classList.add('active');
         }
 
