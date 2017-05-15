@@ -1,0 +1,290 @@
+@import url(//fonts.googleapis.com/css?family=Roboto);
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {    
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    overflow: hidden;
+}
+
+.main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    left: 0;
+    top: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.35), rgba(0,0,0,0.35));
+    background-color: darkblue;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+    transition: transform 500ms ease;
+    color: white;    
+}
+
+/*.main > * {
+    width: 80%;
+    margin: auto;
+    display: block;
+    overflow: hidden;
+    position: relative;
+}*/
+
+.main.open-side-menu {
+    transform: translateX(250px);
+}
+
+.header {
+    padding: 10px 0;
+    border-bottom: 2px solid #efefef;
+    background-color: darkblue;
+    color: yellow;
+}
+
+.hero {
+    text-align: center;
+    min-height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('images/world-cup.png');
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+}
+
+.hero-image {
+    width: 500px;
+    height: auto;
+}
+
+.side-menu {
+    opacity: 0;
+    transition: opacity 300ms ease;
+    width: 250px;
+    min-height: 100%;
+}
+
+.side-menu.show {
+    opacity: 1;
+}
+
+.side-menu > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.side-menu > ul > li {
+    
+} 
+
+.side-menu > ul > li.title {
+    background-color: dodgerblue;
+    color: white;
+    padding: 15px;
+}
+
+.side-menu > ul > li.active,
+.side-menu > ul > li:not(.title):hover,
+.side-menu > ul > li:not(.title):focus,
+.side-menu > ul > li:not(.title):active {
+    background-color: black;
+    cursor: pointer;    
+}
+
+.side-menu > ul > li.active {
+    cursor: default;
+}
+
+.side-menu > ul > li.active > a {
+    color: white;
+    pointer-events: none;
+}
+
+.side-menu > ul > li > a {
+    text-decoration: none;
+    display: block;
+    padding: 15px 15px;    
+}
+
+.side-menu > ul > li:not(.active) > a {
+    color: black;
+}
+
+.side-menu > ul > li:hover > a {
+    color: white;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    outline: none;
+    color: white;
+}
+
+.hamburger:hover {
+    background: dodgerblue;
+    color: white;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    color: whitesmoke;
+    text-underline-position: below;
+    cursor: pointer;
+    font-size: 24px;
+    
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: grey;
+    border: white 1px;
+    color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    cursor: default;
+    color: black;
+}
+p.inset {border-style: inset;
+         border-bottom-color: darkgoldenrod;
+         border-width: 6px;        
+         }
+
+p.outset {border-style: outset;
+          border-width: 6px;
+          }
+
+.stadium{
+    width: 70%;
+}
+.links{
+    font-size: 32px;
+    text-underline-position: none;
+}
+.links:hover{
+    cursor: pointer;
+}
+.footer{
+    color: yellow;
+    background-color: darkblue;
+    min-height: 70px;
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid #efefef;
+}
+.animation{
+    background-color: greenyellow;
+}
+
+.carousel {
+    width: 100%;
+    height: 362px;
+    position: absolute;
+    left: 0;
+}
+
+.carousel > .slide {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    transition: all 1s ease-in;
+    display: none;
+}
+
+.carousel > .slide.prev {
+    display: block;
+    transform: translateX(-100%);
+    z-index: 1;
+}
+
+.carousel > .slide.next {
+    display: block;
+    transform: translateX(100%);
+    z-index: 1;
+}
+
+.carousel > .slide.active {
+    display: block;
+    opacity: 1;
+    z-index: 1;
+    transform: translateX(0%);
+}
+
+.slide{
+    width: 50%;
+}
+
+
+.imagepopupthingy {
+    position: relative;
+}
+
+.imagepopupthingy > .content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 200ms ease;
+    color: whitesmoke;
+    font-size: 36px;
+}
+
+.imagepopupthingy:hover > .content {
+    opacity: 1;
+}
+
+.imagepopupthingy:hover > .content img {
+    display: inline-block;
+}
+a:link {
+    color: green; 
+    background-color: transparent; 
+    text-decoration: none;
+}
+
+a:visited {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: pink;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+}
+.imagepopupthingy{
+    width: 100%;
+}
