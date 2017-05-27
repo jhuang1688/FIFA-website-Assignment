@@ -15,7 +15,7 @@ html, body {
 body {    
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
     overflow: hidden;
 }
 
@@ -58,7 +58,7 @@ body {
 .hero {
     text-align: center;
     min-height: 100%;
-    background: linear-gradient(to right, rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('/images/world-cup.png');
+    background: linear-gradient(to right, rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url("images/world-cup.png");
     background-color: black;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -237,8 +237,7 @@ p.outset {border-style: outset;
 }
 
 .slide{
-    width: 80;
-    align-items: center;
+    width: 50%;
 }
 
 
@@ -252,7 +251,8 @@ p.outset {border-style: outset;
     width: 100%;
     opacity: 0;
     transition: opacity 200ms ease;
-    color: black;
+    color: whitesmoke;
+    font-size: 36px;
 }
 
 .imagepopupthingy:hover > .content {
@@ -269,13 +269,13 @@ a:link {
 }
 
 a:visited {
-    color: blue;
+    color: green;
     background-color: transparent;
     text-decoration: none;
 }
 
 a:hover {
-    color: red;
+    color: pink;
     background-color: transparent;
     text-decoration: underline;
 }
