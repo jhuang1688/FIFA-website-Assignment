@@ -79,7 +79,7 @@
 
     /*
      * Carousel
-     */
+     */ 
     var carousel = document.querySelector('.carousel');
     if (carousel) {
         var slides = carousel.children;
